@@ -1,24 +1,19 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.net.http.HttpClient;
 
 
-public class WebsiteReader {
-    HttpClient client = HttpClient.newHttpClient();
-    String website;
+abstract public class Reader<C> {
+    // Fields
+    final HttpClient client;
+    final String website;
 
     // Constructor
-    public WebsiteReader(String website) {
+    public Reader(String website) {
         this.website = website;
+        client = HttpClient.newHttpClient();
     }
 
     // Gets the website HTML content and returns as String
-    public String get() throws IOException {
-        Document doc = Jsoup.connect(website).get();
-        System.out.println(doc.body());
-        return "";
-    }
-    // add jsoup as dependency but i cba now
+    abstract String get() throws IOException;
 
 }
