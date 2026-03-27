@@ -1,4 +1,4 @@
-package Readers;
+package readers;
 
 import java.io.IOException;
 import java.net.http.HttpClient;

@@ -1,7 +1,7 @@
-import Readers.CssClassReader;
-import Readers.GenericReader;
-import Readers.IdReader;
-import Readers.XPathReader;
+import readers.CssClassReader;
+import readers.GenericReader;
+import readers.IdReader;
+import readers.XPathReader;
 
 import java.io.IOException;
 

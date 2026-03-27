@@ -1,4 +1,4 @@
-package Readers;
+package readers;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
