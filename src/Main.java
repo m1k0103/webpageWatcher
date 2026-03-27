@@ -1,3 +1,8 @@
+import Readers.CssClassReader;
+import Readers.GenericReader;
+import Readers.IdReader;
+import Readers.XPathReader;
+
 import java.io.IOException;
 
 public class Main {
@@ -27,11 +32,11 @@ public class Main {
 
 /* CODE EXPLANATION:
 *
-* Reader   <--- Superclass
-* GenericReader     <--- Subclass of Reader. Gets the whole contents of
+* Readers.Reader   <--- Superclass
+* Readers.GenericReader     <--- Subclass of Readers.Reader. Gets the whole contents of
 *                        the target page.
-* XPathReader     <--- Subclass of GenericReader. Gets an element from
-*                      the output of GenericReader by a certain XPath.
-* CssClassReader     <--- Subclass of GenericReader. Gets one or all elements
+* Readers.XPathReader     <--- Subclass of Readers.GenericReader. Gets an element from
+*                      the output of Readers.GenericReader by a certain XPath.
+* Readers.CssClassReader     <--- Subclass of Readers.GenericReader. Gets one or all elements
 *                        that contain a certain CSS class
 * */
